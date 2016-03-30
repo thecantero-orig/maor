@@ -5,22 +5,27 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+1. Update gem [devise, twitter-bootstrap-rails, devise-bootstrap-views]
+1. run initial installation for gems
+```
+bundle exec rails g devise:install
+bundle exec rails g devise User
+bundle exec rails g bootstrap:install static
+bundle exec rails g devise:views:locale en 
+bundle exec rails g devise:views:bootstrap_templates 
+bundle exec rails g controller welcome index
+```
+1. update routes `root`
+1. clean layouts/application
+1. add layouts/settings
+1. add controllers/users_controller.rb
+1. add 'settings' to config/routes.rb
+1. add Profile model
+```
+bundle exec rails g model Profile address:string phone:string user:belongs_to
+```
+1. set User Model `before_create :set_default_association` [link](http://stackoverflow.com/questions/3808782/rails-best-practice-how-to-create-dependent-has-one-relations)
+1. Add Form
 * ...
 
 
