@@ -45,3 +45,9 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'twitter-bootstrap-rails'
+
+gem 'pg'
+gem 'rails_12factor'
