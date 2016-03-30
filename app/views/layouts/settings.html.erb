@@ -62,6 +62,17 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>Sidebar</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "General", settings_path(:tab => :account) %></li>
+              <li><%= link_to "Security", settings_path(:tab => :security) %></li>
+              <li><%= link_to "Privacy", settings_path(:tab => :privacy) %></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
       </div><!--/row-->
 
       <footer>
