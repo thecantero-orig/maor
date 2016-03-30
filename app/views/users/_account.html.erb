@@ -1,8 +1,11 @@
 <h1>General Account Settings</h1>
 
 <div>
-  <strong>Email</strong> <%= @user.email %>
+  <strong>Name</strong> <%= current_user.full_name %>
 </div>
 <div>
-  <strong>encrypted_password</strong> <%= @user.encrypted_password %>
+  <strong>Email</strong> <%= current_user.email %>
 </div>
+<div>
+  <strong>encrypted_password</strong> <%= current_user.encrypted_password %>
+</div> 
